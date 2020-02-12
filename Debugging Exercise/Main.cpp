@@ -85,7 +85,8 @@ int main()
 				squad.begin()->takeDamage(i->attack());
 				if (squad.begin()->isAlive())
 				{
-
+					cout << "The marine target dies" << endl;
+					squad.erase(squad.begin());
 				}
 				else
 					squad.erase(squad.begin());
