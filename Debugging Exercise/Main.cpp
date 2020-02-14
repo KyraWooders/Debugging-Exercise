@@ -82,14 +82,14 @@ int main()
 			for (vector<Zergling>::iterator i = swarm.begin(); i != swarm.end(); ++i) // loop through zerglings
 			{
 				cout << "A zergling attacks for " << i->attack() << " damage." << endl;
-				squad.begin()->takeDamage(i->attack());
-				if (squad.begin()->isAlive())
+				swarm.begin()->takeDamage(i->attack());
+				if (swarm.begin()->isAlive())
 				{
 					cout << "The marine target dies" << endl;
-					squad.erase(squad.begin());
+					swarm.erase(swarm.begin());
 				}
 				else
-					squad.erase(squad.begin());
+					swarm.erase(swarm.begin());
 					cout << "The marine succumbs to his wounds." << endl;
 					
 			}
