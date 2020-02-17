@@ -18,9 +18,14 @@ int Entity::attack()
 
 void Entity::takeDamage(int damage)
 {
+	
 }
 
 bool Entity::isAlive()
 {
-	return health = 0;
+	if (health <= 0)
+	{
+		return false;
+	}
+	return true;
 }

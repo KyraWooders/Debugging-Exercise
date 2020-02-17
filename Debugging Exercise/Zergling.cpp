@@ -4,6 +4,7 @@
 
 Zergling::Zergling()
 {
+	health = 50;
 }
 
 
