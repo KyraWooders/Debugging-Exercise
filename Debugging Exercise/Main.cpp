@@ -25,14 +25,22 @@ using std::endl;
 // Is there a Marine Alive?
 bool marineAlive(vector<Marine> squad)
 {
-	return squad.size() > 0;
+	if (squad.size() <= 0)
+	{
+		return false;
+	}
+	return true;
 }
 
 
 // Is there a zergling Alive
 bool zerglingAlive(vector<Zergling> swarm)
 {
-	return swarm.size();
+	if (swarm.size() <= 0)
+	{
+		return false;
+	}
+	return true;
 }
 
 
@@ -73,10 +81,12 @@ int main()
 				{
 					cout << "The zergling target dies" << endl;
 					swarm.erase(swarm.begin());
+					swarmSize--;
+					break;
 				}
 				else
 				{
-					cout << "The zergling succumbs to his wounds." << endl;
+					cout << "The zergling got hit but still alive." << endl;
 				}
 			}
 		}
@@ -89,12 +99,14 @@ int main()
 				squad[0].takeDamage(damage);
 				if (!squad[0].isAlive())
 				{
-					cout << "The marine target dies" << endl;
+					cout << "The marine dies" << endl;
 					squad.erase(squad.begin());
+					squadSize--;
+					break;
 				}
 				else
 				{
-					cout << "The marine succumbs to his wounds." << endl;
+					cout << "The marine got hit but still alive." << endl;
 				}					
 			}
 		}
