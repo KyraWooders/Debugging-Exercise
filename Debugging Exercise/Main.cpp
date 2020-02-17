@@ -49,8 +49,8 @@ int main()
 	vector<Marine> squad;
 	vector<Zergling> swarm;
 
-	int squadSize = 5;
-	int swarmSize = 5;
+	int squadSize = 10;
+	int swarmSize = 20;
 
 	// Set up the Squad and the Swarm at their initial sizes listed above
 	for (size_t i = 0; i < squadSize; i++)
